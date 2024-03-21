@@ -13,9 +13,7 @@ ul {
 button {
   cursor: pointer;
 }
-* {
-  outline: none;
-}
+
 :root {
   --primary-brand: #4D5AE5;
   --pressed-state: #404BBF;
@@ -72,13 +70,21 @@ h3 {
   line-height: 1.2;
 }
 
+/* Header */
 header {
   background-color: var(--white-background);
 }
-header .logo-text {
-  color: var(--dark);
+
+/* Hero section */
+.section-hero {
+  background-color: var(--dark);
 }
 
+.section-hero h1 {
+  color: var(--white-text);
+}
+
+/* Buttons */
 .button {
   font-size: 16px;
   line-height: 1.5;
@@ -103,6 +109,7 @@ button.secondary:focus {
   color: var(--white-text);
 }
 
+/* Navigation */
 .page-nav {
   color: var(--dark);
 }
@@ -110,6 +117,11 @@ button.secondary:focus {
   font-weight: 500;
 }
 
+.address-phone--link:hover {
+  color: var(--text);
+}
+
+/* Brand Logo */
 .logo-text {
   font-family: "Raleway";
   font-weight: 800;
@@ -117,24 +129,22 @@ button.secondary:focus {
   font-size: 18px;
   line-height: 1.16;
   letter-spacing: 3%;
+  color: var(--primary-brand)
 }
-.logo-text--prefix {
-  color: var(--primary-brand);
+.logo-text:hover,
+.logo-text:focus  {
+  color: var(--primary-brand)
+}
+.logo-text--accent {
+  color: var(--dark);
 }
 
+/* Footer */
 footer {
   background-color: var(--dark);
   color: var(--white-text);
 }
 
-footer .logo-text {
-  color: var(--white-text);
-}
-
-.section-hero {
-  background-color: var(--dark);
-}
-
-.section-hero h1 {
+footer .logo-text--accent {
   color: var(--white-text);
 }
