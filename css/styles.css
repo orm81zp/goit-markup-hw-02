@@ -1,7 +1,5 @@
-html, 
-body, 
-p, 
-ul {
+/* normalize */
+html, body, p, ul {
   margin: 0;
   padding: 0;
 }
@@ -14,6 +12,7 @@ button {
   cursor: pointer;
 }
 
+/* CSS variables */
 :root {
   --primary-brand: #4D5AE5;
   --pressed-state: #404BBF;
@@ -29,6 +28,15 @@ button {
   --modal-background: #FCFCFC;
 }
 
+/* Body */
+body {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  letter-spacing: 2%;
+}
+
+/* links */
 a {
   text-decoration: none;
   color: var(--text);
@@ -39,58 +47,14 @@ a:focus {
   color: var(--pressed-state);
 }
 
-body {
-  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--text);
-  letter-spacing: 2%;
-}
-
-h1, h2 {
-  font-weight: 700;
-}
-h3 {
-  font-weight: 500;
-}
-h1, h2, h3 {
-  color: var(--dark);
-}
-h1 {
-  font-size: 56px;
-  line-height: 1.08;
-}
-h2 {
-  font-size: 36px;
-  line-height: 1.11;
-}
-h3 {
-  font-size: 20px;
-  line-height: 1.2;
-}
-
-/* Header */
-header {
-  background-color: var(--white-background);
-}
-
-/* Hero section */
-.section-hero {
-  background-color: var(--dark);
-}
-
-.section-hero h1 {
-  color: var(--white-text);
-}
-
 /* Buttons */
 .button {
-  font-size: 16px;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 500;
   line-height: 1.5;
   background-color: var(--primary-brand);
   color: var(--white-text);
-  font-weight: 500;
 }
 
 .button:hover, 
@@ -109,20 +73,53 @@ button.secondary:focus {
   color: var(--white-text);
 }
 
+/* headings */
+.heading {
+  color: var(--dark);
+}
+.heading-1 {
+  font-size: 56px;
+  line-height: 1.08;
+  font-weight: 700; /* bold by default */
+}
+.heading-2 {
+  font-size: 36px;
+  line-height: 1.11;
+  font-weight: 700; /* bold by default */
+}
+.heading-3 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500; /* bold by default */
+}
+
+/* Header */
+header {
+  background-color: var(--white-background);
+}
+
+/* Hero section */
+.section-hero {
+  background-color: var(--dark);
+}
+
+.section-hero .heading-1 {
+  color: var(--white-text);
+}
+
 /* Navigation */
 .page-nav {
   color: var(--dark);
 }
-.page-nav--link {
+.page-nav-link {
   font-weight: 500;
 }
-
-.address-phone--link:hover {
-  color: var(--text);
+.address-list {
+  font-style: normal;
 }
 
 /* Brand Logo */
-.logo-text {
+.brandlogo-text {
   font-family: "Raleway";
   font-weight: 800;
   text-transform: uppercase;
@@ -131,20 +128,19 @@ button.secondary:focus {
   letter-spacing: 3%;
   color: var(--primary-brand)
 }
-.logo-text:hover,
-.logo-text:focus  {
+.brandlogo-text:hover,
+.brandlogo-text:focus  {
   color: var(--primary-brand)
 }
-.logo-text--accent {
+.brandlogo-text .accent {
   color: var(--dark);
+}
+.brandlogo-text.light .accent {
+  color: var(--white-text);
 }
 
 /* Footer */
 footer {
   background-color: var(--dark);
-  color: var(--white-text);
-}
-
-footer .logo-text--accent {
   color: var(--white-text);
 }
